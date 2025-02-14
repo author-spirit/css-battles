@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+
+        .live_agent_feedback_rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            float: left;
+            width: 100%;
+            display: flex;
+        }
+
+       .live_agent_feedback_rating > div.active > label::before,
+        .live_agent_feedback_rating > div.active ~ div > label::before,
+        .live_agent_feedback_rating > div > label:active::before,
+        .live_agent_feedback_rating > div:active ~ div > label::before,
+        .live_agent_feedback_rating > div > label:hover::before,
+        .live_agent_feedback_rating > div:hover ~ div > label::before
+        {
+            content: "\2605";
+            color: gold;
+            position: absolute;
+        }
+
+       .live_agent_feedback_rating > div {
+            width: 100%;
+            text-align: center;
+            display: block;
+       }
+
+       .live_agent_feedback_rating > div > input{
+            display: none;
+       }
+
+       .live_agent_feedback_rating > div > label{
+            font-size: 28px;
+       }
+
+       .live_agent_feedback_rating > div > small{
+            display: block;
+       }
+    </style>
+</head>
+<body>
+    <div class="">
+        <h3>Please share your feedback</h3>
+        <div class="live_agent_feedback_rating">
+            <div>
+                <label for="star5">☆</label>
+                <input type="radio" id="star5" class="live_agent_feedback_rating_value" name="starValue" value="5">
+                <small>Excellent</small>
+            </div>
+            <div>
+                <label for="star4">☆</label>
+                <input type="radio" id="star4" class="live_agent_feedback_rating_value" name="starValue" value="4">
+                <small>Satisfactory</small>
+            </div>
+            <div>
+                <label for="star3">☆</label>
+                <input type="radio" id="star3" class="live_agent_feedback_rating_value" name="starValue" value="3">
+                <small>Average</small>
+            </div>
+            <div>
+                <label for="star2">☆</label>
+                <input type="radio" id="star2" class="live_agent_feedback_rating_value" name="starValue" value="2">
+                <small>Below Average</small>
+            </div>
+            <div>
+                <label for="star1">☆</label>
+                <input type="radio" id="star1" class="live_agent_feedback_rating_value" name="starValue" value="1">
+                <small>Poor</small>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
