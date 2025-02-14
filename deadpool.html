@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		@keyframes heartbeat{
+			0%{
+				r: 0px;
+				fill: gray;
+			}
+			100% {
+				r: 200px;
+				fill: red;
+			}
+		}
+		.heartbeat {
+			animation: heartbeat 1s infinite alternate;
+		}
+	</style>
+</head>
+<body>
+	<svg viewBox="0 0 600 600" width="600" height="600" style="border: thick solid black;">
+		<g>
+			<circle cx="50%" cy="50%" r="100" stroke="maroon" stroke-width="20px"></circle>
+			<rect x="47%" y="33%" fill="maroon" width="40px" height="200px" ></rect>
+			<path d="M240,270 A10,10 0 0 0 270,290" fill="white" stroke-width="5px"></path>
+			<path d="M360,270 A10,10 0 0 1 330,290" fill="white" stroke-width="5px"></path>
+		</g>
+	</svg>
+	<script>
+	</script>
+</body>
+</html>
